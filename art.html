@@ -4,65 +4,181 @@
     <meta charset="utf-8" />
     <title>Final Project - Art</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <style>
+  <style>
       /* Styling Only Related To THIS Page */
       .parent-flex {
         display: flex;
-        background-color: purple;
         justify-content: space-around;
         padding: 10px;
         margin-bottom: 20px;
+        overflow: auto;
+        white-space: nowrap;
+        margin-bottom: 0;
+        padding-top: 40px;
       }
 
-      img {
-        max-width: 30%;
+      .parent-flex img {
+        margin: 10px;
+        height: 130px;
         border-radius: 10px;
-        object-fit: contain;
-        background-color: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
       }
-    </style>
+      
+      .parent-flex img:hover {
+        transform: translateY(-20px) scale(1.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);      
+      }
+      
+      #painting-spotlight {
+        height: 500px;
+        margin-left: 30px;
+        margin-right: 30px;
+        
+      }
+      
+      #big-painting-div {
+        display: flex;
+        align-items: center;
+        justidy-content: center;
+      }
+      
+      #top-div-painting {
+        display:flex;
+        justify-content: space-between;
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-bottom: 5px;
+        margin-top: 30px;
+        align-items: stretch;
+        height: 500px;
+      }
+      
+      #painting-info {
+        font-size: 40px;
+        
+      }
+      
+      #painting-title {
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      #info-div {
+        diplay: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-right: 20px
+      }
+</style>
   </head>
   <body>
     <!-- ⬆⬆⬆⬆ Nav Bar -->
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="aboutme.html">About Me</a></li>
-      <li><a class="active" href="art.html">Art</a></li>
+       <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="art.html">Art</a></li>
+      <li><a href="Unity.html">Unity</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li style="float: right">
-        <a target="_blank" href=""
+      <a target="_blank" href="https://www.youtube.com/@lagunitydancecrew"
           ><img
             src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png"
             style="width: 25px; margin: -5px"
         /></a>
-      </li>
-      <li style="float: right">
-        <a target="_blank" href=""
-          ><img
-            src="https://img.icons8.com/win10/512/FFFFFF/instagram-new.png"
-            style="width: 25px; margin: -5px"
-        /></a>
-      </li>
     </ul>
     <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
     <h1>My Art</h1>
 
-    <div class="parent-flex">
+    <div id="top-div-painting">
+      <div id="info-div"> 
+        <div id="painting-title"
+             style="display: none"
+             >
+        Tittle of Piece  
+        </div>
+        <div id="painting-info"
+             style="display: none"
+             >
+        Piece Info
+      </div>
+      </div>
+      
+      <div id="big-painting-div">
+        <img id="painting-spotlight"
+             style="display: none"
+             src="images/2021_WebDevLogo_transpYear.png">
+      </div>
+    </div>
+    
+    
+<!-- Scroll paintings bottom -->
+    <div class="parent-flex fade-in">
       <img
-        src="images/HeartIcons.jpeg"
+           id="birthday-art" class="tiny-painting"
+           src="https://lh3.googleusercontent.com/sitesv/AA5AbUBGv7KHrcry2diTevqjfj9uT8cVqwVGwnYs_XSHi-vNVhQKyg-qBwXXv-CePBgCXacDyaQr0ik61CLYl9rytfYF28Iqazo2OB_wRiaCdIdbcfSPfSH-sLJtDqlENU8aFDsZZ4EmPnedSvyB_PMUgBa29T-PAxO20E40x3AZ5Nh5Hb9WDmWMEK_Gs0qf4FX7Us9K8FOrmCqzG7kdOpvtSrE3oTF7Yvxe1fkYY7mmEmk=w1280" 
+           data-title="Brazil Ad Poster"
+           data-info="Photo + Adobe Illistrator<br>2025"
+      />
+        <img
+           id="candle-art" class="tiny-painting"
+        src="https://lh3.googleusercontent.com/sitesv/AA5AbUDBzDwoGyMFSCoQctqW2Tc-8VkHOhzMc-pm22EtRmT3-3PXyo_ReoLG0SQ4mxOtQKSf7tAePYWL4tXZhv6_1cZJ0V3M693tjnGDqncdK4IrEYLXM82tc5mPFb8Ol99wXLPzWw5f0t0bvMgth4YSYTxWkxhQYwKB_lEHjyx8C-WZrilsaVUR8jvfq7ZQYL7YVPSvPeIzP9OYGmeAg0UPcOg1mAxoherZLzXSGhaX8Ig=w1280"
+           data-title="Birthday Poster"
+           data-info="Illistrator<br>2025"
       />
       <img
-        src="images/VibeyTunes.png"
+           id="blue-art" class="tiny-painting"
+        src="https://lh3.googleusercontent.com/sitesv/AA5AbUCrSR7tfSA42peaO_MGnYKSIHxhYFWUlLJM6wX40UnyvT5b5KkDNzaTOCerJ5SkZHLww1WbkOufhNVWphKMIoZPOHENksPTJoolvP6Mh_X-wTkIEnRVDIHoetJKR95hID6mBi4pfnqJvpd3NyNxc0cewmWNxS8uQFinTtujg1nbT9dwZZMtbFbWuE-AFs-oK5bvw6wZFzhQTYcvG9DUdFTyLNJYTFoo_YlCXdmOeb4=w1280"
+           data-title="Birthday Poster"
+           data-info="Illistrator<br>2026"
+      />
+     <img
+           id="blue-art" class="tiny-painting"
+        src="https://lh3.googleusercontent.com/sitesv/AA5AbUDOkJExWHMz37kq9_KpVKuHUfTrtmlL4frfqATsUHv1UwsLtgIArWcAYIM94GwAtq97F_ed63YiiAqiwvRWUrYhnPPydjA9WNAEGO2gSN9wgd17VMKtwJHqRe01eJSl4stj-eVBA0FItaaYs--1IVFmgWmnL1vBhGWX2X3nk4GNjs7-IrgfPcKffI3zqkrt4b43-twUPMqes-BSczXSY81llBDdQ8N3LxuCWO3e=w1280"
+           data-title="Spring Semi-Annual"
+           data-info="Illistrator <br>2026"
+      />
+           <img
+           id="blue-art" class="tiny-painting"
+        src="https://lh3.googleusercontent.com/sitesv/AA5AbUA3l0SZYkc4fEwsj0WoRsz8AkNPBdAqNQHZefsmIDhnNHexE6tIboTny08qnAy-UJeXS-ItJYnY2V7thLOF_7gDwce8HaOlafB-9PVAq-Hk0YCRLmgKSkTtd8ywHe7Xpp0i2yyvppr9DxmQhsr0pkrmrMvU7uY-Vs0XLOsh1pahihrJ5o83K9hpKXWfw7aZbtIto_eRHuP0gCNiND2TZnwZJG6MKABc8bfKbNr1WO4=w1280"
+           data-title="Name Logo"
+           data-info="Illistrator + Photoshop <br>2026"
+      />
       />
     </div>
 
-    <div class="parent-flex">
-      <img
-        src="images/VibeyTunes.png"
-      />
-      <img
-        src="images/HeartIcons.jpeg"
-      />
-    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+     $(document).ready(function () {
+    $(".tiny-painting").click(function () {
+      const newSrc = $(this).attr("src");
+      const newTitle = $(this).attr("data-title");
+      const newInfo = $(this).attr("data-info");
+
+      $("#painting-spotlight").fadeOut(400, function () {
+        $(this).attr("src", newSrc).fadeIn(400);
+      });
+
+      $("#painting-title").fadeOut(400, function () {
+        $(this).text(newTitle).fadeIn(400);
+      });
+
+      $("#painting-info").fadeOut(400, function () {
+        $(this).html(newInfo).fadeIn(400);
+      });
+    });
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const fadeElems = document.querySelectorAll('.fade-in');
+    fadeElems.forEach((el, i) => {
+      setTimeout(() => {
+        el.classList.add('visible');
+      }, i * 300); 
+    });
+  });
+
+    </script>
   </body>
 </html>
+

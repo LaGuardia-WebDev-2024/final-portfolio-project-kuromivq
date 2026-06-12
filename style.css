@@ -3,16 +3,20 @@
 body {
   padding-top: 30px;
   margin-left: 0px;
+  @import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+
 }
 /* ⬆⬆⬆⬆ Nav Bar Styling 
 ~~~~~ Taken From: 
 https://www.w3schools.com/css/css_navbar_horizontal.asp */
 ul {
+  
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333;
+  background-color:rgb(205, 152, 255);
   position: fixed;
   top: 0;
   width: 100%;
@@ -32,13 +36,32 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: orange;
+  background-color: rgb(241, 195, 255);
 }
 
 .active {
-  background-color: red;
+  background-color: rgb(172, 127, 209);
 }
 
 h1 {
   width: 100%;
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+p {
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: 40px;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+img{
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: 40px;
+  font-weight: <weight>;
+  font-style: normal;
 }
